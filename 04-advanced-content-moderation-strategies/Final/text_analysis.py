@@ -3,7 +3,7 @@ from azure.core.exceptions import HttpResponseError
 from azure.ai.contentsafety.models import AnalyzeTextOptions, TextCategory, AnalyzeTextOutputType
 
 # Funtion call to check if the text is safe for publication
-def moderate_text(client,text):
+def analyze_text(client,text):
     # Construct a request
     request = AnalyzeTextOptions(text=text, output_type=AnalyzeTextOutputType.EIGHT_SEVERITY_LEVELS)
 

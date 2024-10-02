@@ -3,7 +3,7 @@ from azure.core.exceptions import HttpResponseError
 from azure.ai.contentsafety.models import AnalyzeImageOptions, ImageData, AnalyzeImageOutputType, ImageCategory
 
 
-def moderate_image(client, image_data):
+def analyze_image(client, image_data):
     # Construct a request
     request = AnalyzeImageOptions(image=ImageData(content=image_data),
                                   output_type=AnalyzeImageOutputType.FOUR_SEVERITY_LEVELS)
